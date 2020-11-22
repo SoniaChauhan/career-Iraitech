@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" style="width: auto;" (click)="_local.addXcomponent()">(+) Add X Component</button>
+        </div>
+    </div>
+    <ng-container *ngIf="_local.isAddedXComponent">
+
+        <div *ngFor="let x of _local.itemsX; let i = index">
+            <hr class="custom-hr">
+            <app-first [index]="i" [item]="x"></app-first>
+        </div>
+    </ng-container>
+
+</div>

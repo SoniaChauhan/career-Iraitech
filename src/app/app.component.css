@@ -1,0 +1,19 @@
+.info-box {
+    border: 2px solid;
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+span.bg-blue {
+    background-color: #2e9694 !important;
+}
+
+.info-box-content {
+    padding: 31px 10px;
+    text-align: center;
+}

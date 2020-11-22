@@ -1,0 +1,29 @@
+<hr class="custom-hr">
+<form (ngSubmit)="onsubmit()">
+    <div class="container">
+        <div class="row" *ngFor="let item of multiContact; index as i">
+            <div class="col-md-12 form-group">
+                <div class="col-md-6">
+                    <label>Primary Mobile No.</label>
+                    <input type="text" max="12" class="form-control" name="prinum{{i}}" placeholder="Enter Primary Nuber" [(ngModel)]="item.phone">
+                </div>
+                <div class="col-md-2 pull-left" style="margin-top: 1.8%;" *ngIf="i!=0">
+                    <label for=""></label>
+                    <button class="btn btn-danger" (click)="deleteContact(i)"> delete </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <div class="col-md-6">
+                    <span class="btn btn-success pull-left" (click)="addAnotherPhoneNum()"> + Add Another Phone Number</span>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary pull-left">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>

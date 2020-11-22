@@ -1,0 +1,33 @@
+<hr class="custom-hr">
+<div class="container">
+    <form #firstQues="ngForm">
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <div class="col-md-4">
+                    <table class="table">
+                        <tr>
+                            <th>Index</th>
+                            <th>Number</th>
+                        </tr>
+                        <tr *ngFor="let item of arr; index as i">
+                            <td>{{i}}</td>
+                            <td>{{item}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" autocomplete="off" [(ngModel)]="_local.mainObj.number" name="num" placeholder="Enter Index">
+                </div>
+                <div class="col-md-4 btn btn-primary btn-sm" style="width: auto;" (click)="getIndex()">Get Number</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="text-align: center; color: red;">{{_local.actualNum}}</h3>
+
+            </div>
+        </div>
+
+    </form>
+
+</div>

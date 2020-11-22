@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Component Y</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    Component Y Details
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <form #componentX="ngForm">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Enter Your Name" autocomplete="off" class="form-control" name="name{{index}}" [(ngModel)]="item.Y">
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary pull-right" style="width: auto;" (click)="_local.addYname()">Save Y</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

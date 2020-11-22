@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Component X</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <div class="col-md-6">Component X Details</div>
+                    <div class="col-md-6"><button class="btn btn-primary pull-right" (click)="_local.addYcomponent(index)" style="width: auto;">(+) Add Y Component</button></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel-body">
+            <form #componentX="ngForm">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <div class="col-md-6">
+                            <input type="text" placeholder="Enter Your Name " class="form-control" autocomplete="off" name="name{{index}}" [(ngModel)]="item.X">
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary pull-right" style="width: auto;" (click)="_local.addXname()">Save X</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ng-container *ngIf="_local.isAddedYComponent">
+                            <div *ngFor="let y of _local.itemsY; let i = index">
+                                <app-second [index]="i" [item]="y"></app-second>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <button class="btn btn-danger pull-left" style="width: auto;" (click)="_local.addResult()">Click here to get final result</button> -->
+                        <button class="btn btn-danger pull-right" style="width: auto;" (click)="_local.finalResult()">Click here to get final result</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
